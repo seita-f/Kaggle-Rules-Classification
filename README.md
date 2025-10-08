@@ -50,7 +50,7 @@ dd-mm-yyyy
 - Top players seem to use part of the test data for training and it boosts score significantly even without large LLMs. <br>
 In test.csv there are columns positive_example_1/2 and negative_example_1/2.
 For each rule in the test set, these contain labeled example comments that either violate or do not violate that rule.
-- Score: 0.761
+- Score: 0.761 (used 20% test data)
 
 #### 08-10-2025
 - Not only test data, but using positive_example_1/2 and negative_example_1/2 in train data as well.
