@@ -43,13 +43,14 @@ dd-mm-yyyy
 - Build a base model with <b>Bert</b> and just passed body data
 - <b>f1</b> metric for evaluating
 - No internet is allowed, so pre-trained model should be added to the dataset on kaggle
-- First submission --> 0.584 (The public best score 0.931 seems the ceiling)
+- First submission --> Score: 0.584 (The public best score 0.931 seems the ceiling)
 
 #### 06-10-2025
 - Tuned RoBERTa model (an upgraded version of BERT) using body, but the score slightly dropped
 - Top players seem to use part of the test data for training and it boosts score significantly even without large LLMs. <br>
 In test.csv there are columns positive_example_1/2 and negative_example_1/2.
 For each rule in the test set, these contain labeled example comments that either violate or do not violate that rule.
+- Score: 0.761
 
 #### 08-10-2025
 - Hiden rules exisiting in the test data are revealed by experts.
