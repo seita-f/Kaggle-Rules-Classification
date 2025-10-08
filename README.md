@@ -52,5 +52,8 @@ In test.csv there are columns positive_example_1/2 and negative_example_1/2.
 For each rule in the test set, these contain labeled example comments that either violate or do not violate that rule.
 
 #### 08-10-2025
+- Hiden rules exisiting in the test data are revealed by experts.
+<img width="966" height="543" alt="Screen Shot 2025-10-08 at 20 56 48" src="https://github.com/user-attachments/assets/737170d2-f344-46fc-bf3c-7a7aac0ae1b0" />
 
+  
 
