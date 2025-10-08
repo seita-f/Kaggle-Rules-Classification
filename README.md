@@ -35,7 +35,7 @@ Furthermore, the test data contains a large amount of data that includes rules n
 | kaggle topic | [Grey Area in the Rules](https://www.kaggle.com/competitions/jigsaw-agile-community-rules/discussion/598099#3267150) | Using test data for training | 
 
 
-## Log 
+## Note
 (might use MLFlow later)
 
 dd-mm-yyyy
