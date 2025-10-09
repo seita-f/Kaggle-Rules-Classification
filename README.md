@@ -33,7 +33,7 @@ Furthermore, the test data contains a large amount of data that includes rules n
 | --- | --- | --- | 
 | kaggle topic | [The rules are revealed](https://www.kaggle.com/competitions/jigsaw-agile-community-rules/discussion/607941) | The list of hiden rules (in test data) |
 | kaggle topic | [Grey Area in the Rules](https://www.kaggle.com/competitions/jigsaw-agile-community-rules/discussion/598099#3267150) | Using test data for training | 
-
+| hugging face | [text-generation models](https://huggingface.co/models?pipeline_tag=text-generation&sort=downloads) | Reasonable models that can be used in this competition |
 
 ## Note
 (might use MLFlow later)
@@ -57,11 +57,12 @@ For each rule in the test set, these contain labeled example comments that eithe
 - Hiden rules exisiting in the test data are revealed by experts.
 <img width="700" height="400" alt="Screen Shot 2025-10-08 at 20 56 48" src="https://github.com/user-attachments/assets/737170d2-f344-46fc-bf3c-7a7aac0ae1b0" />
 
-- I believe the test data I used contains all of these rules, but I can’t view the entire dataset due to Kaggle’s system restrictions. So creating a few of synthetic data manually might help.
+- I believe the test data I used contains all of these rules, but I can’t view the entire dataset due to Kaggle’s system restrictions. So creating a few of synthetic data manually might help. --> Might use this after analyzing the result
 
-- (To-do) Also try prompt engineering like
-  ```
-  instruction: XXX
-  text: XXX
-  answer: 
-  ```
+
+#### 09-10-2025
+- Switched to prompt engineering. For now, disable adding examples so that I can use it in the prompt.
+```
+
+```
+
