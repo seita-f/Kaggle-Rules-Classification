@@ -60,9 +60,9 @@ For each rule in the test set, these contain labeled example comments that eithe
 #### 09-10-2025
 - Added rule and subreddit data (finally)
 ```
-X = "Rule: " + df_train["rule"] + \
-              " Subreddit: " + df_train["subreddit"] + \
-              " Comment: " + df_train['body']
+X = "Rule: " + df_train["rule"] +
+    " Subreddit: " + df_train["subreddit"] + \
+    " Comment: " + df_train['body']
 ```
 
 - I believe the test data I used contains all of these rules, but I can’t view the entire dataset due to Kaggle’s system restrictions. So creating a few of synthetic data manually might help. --> Might use this after analyzing the result
