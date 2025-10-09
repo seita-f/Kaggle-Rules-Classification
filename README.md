@@ -66,11 +66,8 @@ X = "Rule: " + df_train["rule"] +
     " Comment: " + df_train['body']
 ```
 
-- I believe the test data I used contains all of these rules, but I can’t view the entire dataset due to Kaggle’s system restrictions. So creating a few of synthetic data manually might help. --> Might use this after analyzing the result
-
-- 
-- Switched to prompt engineering. For now, disable adding examples so that I can use it in the prompt.
-```
+- synthetic data for tuning?
+- switch to prompt engineering? 
 
 ```
 
