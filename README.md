@@ -53,9 +53,15 @@ For each rule in the test set, these contain labeled example comments that eithe
 - Score: 0.761 (used 20% test data)
 
 #### 08-10-2025
-- Not only test data, but using positive_example_1/2 and negative_example_1/2 in train data as well.
+- Not only test data, but using positive_example_1/2 and negative_example_1/2 in train data as well. (Score: 0.767)
 - Hiden rules exisiting in the test data are revealed by experts.
 <img width="700" height="400" alt="Screen Shot 2025-10-08 at 20 56 48" src="https://github.com/user-attachments/assets/737170d2-f344-46fc-bf3c-7a7aac0ae1b0" />
 
 - I believe the test data I used contains all of these rules, but I can’t view the entire dataset due to Kaggle’s system restrictions. So creating a few of synthetic data manually might help.
 
+- (To-do) Also try prompt engineering like
+  ```
+  instruction: XXX
+  text: XXX
+  answer: 
+  ```
