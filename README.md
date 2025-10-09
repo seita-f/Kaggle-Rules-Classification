@@ -65,6 +65,7 @@ X = "Rule: " + df_train["rule"] +
     " Subreddit: " + df_train["subreddit"] + \
     " Comment: " + df_train['body']
 ```
+--> 0.864
 
 - text mining
 - synthetic data for tuning?
