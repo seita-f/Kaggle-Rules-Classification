@@ -69,5 +69,5 @@ X = "Rule: " + df_train["rule"] +
 - synthetic data for tuning?
 - switch to prompt engineering? 
 
-```
+
 
