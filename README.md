@@ -66,6 +66,7 @@ X = "Rule: " + df_train["rule"] +
     " Comment: " + df_train['body']
 ```
 
+- text mining
 - synthetic data for tuning?
 - switch to prompt engineering? 
 
