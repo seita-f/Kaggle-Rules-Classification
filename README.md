@@ -15,7 +15,7 @@ Furthermore, the test data contains a large amount of data that includes rules n
 | positive_example_2 | examples of comments that violate the rule |
 | negative_example_1 | examples of comments that do not violate the rule |
 | negative_example_2 | examples of comments that do not violate the rule |
-| rule_violation | the binary target (0=Negative, 1=Positive)
+| rule_violation | the binary target (0=not violated, 1=violated)
 
 <!-- ## Result
 
