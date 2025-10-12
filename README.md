@@ -66,12 +66,13 @@ X = "Rule: " + df_train["rule"] +
     " Comment: " + df_train['body']
 ```
 - Increased the data taken from the test set from 20% to 40%. However the result was almost the same. --> 20% of data is enough for trainig.
-- There is a chance that comments breaking the specific rules tend to have more capital letters? --> Not huge difference
-<img width="700" height="400" alt="Screen Shot 2025-10-12 at 14 16 27" src="https://github.com/user-attachments/assets/93717880-5def-4232-b3bc-0e0378a2b7d8" /> </br>
-- Another hypothisis is that comments breaking the specifc rules tend to have more urls?
-  --> Not huge diffenrence 
-<img width="700" height="400" alt="Screen Shot 2025-10-12 at 14 18 25" src="https://github.com/user-attachments/assets/e6fe0d08-7761-4e4b-a481-a9343a49cc3d" /> </br>
-However, after training the dataset with URLs removed, the results got worse, indicating that URLs are important features.
+- There is a chance that comments breaking the specific rules tend to have more capital letters? --> No huge difference <br>
+- Another hypothisis is that comments breaking the specifc rules tend to have more urls? --> No huge diffenrence 
+However, after training the dataset with URLs removed, the results got worse, indicating that <b>URLs are important features</b>. <br>
+<p align="center">
+  <img width="45%" alt="Screen Shot 2025-10-12 at 14 16 27" src="https://github.com/user-attachments/assets/93717880-5def-4232-b3bc-0e0378a2b7d8" /> </br>
+  <img width="45%" alt="Screen Shot 2025-10-12 at 14 18 25" src="https://github.com/user-attachments/assets/e6fe0d08-7761-4e4b-a481-a9343a49cc3d" /> 
+</p>
 
 #### 12-10-2025
 - Tried prompt engineering for urls such that
