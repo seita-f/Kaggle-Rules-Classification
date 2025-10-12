@@ -74,13 +74,24 @@ However, after training the dataset with URLs removed, the results got worse, in
   <img width="45%" alt="Screen Shot 2025-10-12 at 14 18 25" src="https://github.com/user-attachments/assets/e6fe0d08-7761-4e4b-a481-a9343a49cc3d" /> 
 </p>
 
-#### 12-10-2025
-- Tried prompt engineering for urls such that
+#### 11-10-2025
+- Tried prompt engineering for urls such that 
 ```
+prompt = (
+        f"Please list 3 to 5 keywords that are likely related to the content of this URL: {url}. "
+        f"Answer the keywords only, separated by commas."
+    )
+
 url = "https://onlyfans.com/user123"
 print(build_prompt(url))
+
+['onlyfans', 'user123', 'content', 'entertainment', 'social', 'media']
 ```
 However, this processing took even more time and wasted resources which is not ideal
+- Switched to AdamW for optimization and AUC-ROC for evaluating but the result got worse. 
+
+
+#### 12-10-2025
 
 
 
