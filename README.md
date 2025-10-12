@@ -70,7 +70,7 @@ X = "Rule: " + df_train["rule"] +
 - Another hypothisis is that comments breaking the specifc rules tend to have more urls? --> No huge diffenrence 
 However, after training the dataset with URLs removed, the results got worse, indicating that <b>URLs are important features</b>. <br>
 <p align="center">
-  <img width="45%" alt="Screen Shot 2025-10-12 at 14 16 27" src="https://github.com/user-attachments/assets/93717880-5def-4232-b3bc-0e0378a2b7d8" /> </br>
+  <img width="45%" alt="Screen Shot 2025-10-12 at 14 16 27" src="https://github.com/user-attachments/assets/93717880-5def-4232-b3bc-0e0378a2b7d8" /> 
   <img width="45%" alt="Screen Shot 2025-10-12 at 14 18 25" src="https://github.com/user-attachments/assets/e6fe0d08-7761-4e4b-a481-a9343a49cc3d" /> 
 </p>
 
