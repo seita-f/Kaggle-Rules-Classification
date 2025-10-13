@@ -89,7 +89,7 @@ print(build_prompt(url))
 ['onlyfans', 'user123', 'content', 'entertainment', 'social', 'media']
 ```
 However, this processing took even more time and wasted resources which is not ideal --> <b>unsloth</b> can be applied?
-- Switched to AdamW for optimization and AUC-ROC for evaluating but the result got worse. 
+- Switched to AdamW for optimization and AUC-ROC for evaluating but the result got worse. --> Each rule is distributed by 16% and labels are balanced. Hence f1 might suit this case
 
 
 #### 12-10-2025
