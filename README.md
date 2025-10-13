@@ -88,7 +88,7 @@ print(build_prompt(url))
 
 ['onlyfans', 'user123', 'content', 'entertainment', 'social', 'media']
 ```
-However, this processing took even more time and wasted resources which is not ideal --> dropped
+However, this processing took even more time and wasted resources which is not ideal --> <b>unsloth</b> can be applied?
 - Switched to AdamW for optimization and AUC-ROC for evaluating but the result got worse. 
 
 
