@@ -100,6 +100,7 @@ However, this processing took even more time and wasted resources which is not i
 - text mining
 - synthetic data for tuning?
 - switch to prompt engineering?
+- switch to multi classification?
 - prompt tuning, fine-tuning
 
 
