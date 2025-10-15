@@ -93,6 +93,12 @@ However, this processing took even more time and wasted resources which is not i
 - Switched to AdamW for optimization and AUC-ROC for evaluating but the result got worse. --> Each rule is distributed by 16% and labels are balanced. Hence f1 might suit this case
 
 #### 15-10-2025
+- Removed noise from URLs such that "wwww" and replaced URL string to
+```
+feature_str = f"<URL:domain={domain}, shortener={is_shortener}, social={is_social}, ip={has_ip}>"
+```
+However, the model's accuracy has decreased. --> path are also imortant features?
+
 - Found Python library <b>Unsloth</b> that provides a high-speed and memory-efficient way to fine-tune LLM. <br>
 This might enable ensemble learning (3 models on 25% of the data each) without running into time out error(?) 
 
