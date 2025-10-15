@@ -102,7 +102,7 @@ However, the model's accuracy has decreased. --> path are also imortant features
 - Found Python library <b>Unsloth</b> that provides a high-speed and memory-efficient way to fine-tune LLM. <br>
 This might enable ensemble learning (3 models on 25% of the data each) without running into time out error(?) 
 
-----------------------------------------------
+## To-do
 - text mining
 - synthetic data for tuning?
 - switch to prompt engineering?
