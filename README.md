@@ -33,6 +33,7 @@ Furthermore, the test data contains a large amount of data that includes rules n
 | --- | --- | --- | 
 | kaggle topic | [The rules are revealed](https://www.kaggle.com/competitions/jigsaw-agile-community-rules/discussion/607941) | The list of hiden rules (in test data) |
 | kaggle topic | [Grey Area in the Rules](https://www.kaggle.com/competitions/jigsaw-agile-community-rules/discussion/598099#3267150) | Using test data for training | 
+| kaggle notebook | [Fine-tuning LLMs using Unsloth](https://www.kaggle.com/code/kingabzpro/fine-tuning-llms-using-unsloth) | Train faster using Unsloth |
 | hugging face | [text-generation models](https://huggingface.co/models?pipeline_tag=text-generation&sort=downloads) | Reasonable models that can be used in this competition |
 | paper | [Chain-of-Thought (CoT) fine-tuning](https://arxiv.org/pdf/2508.11281) | To-Do |
 | paper | [URL に基づく機械学習を用いたフィッシングサイト判別の精度向上](https://www.jc.u-aizu.ac.jp/news/management/gr/2024/03.pdf) |Features of phising URLs. Although it may not apply much to this case, the <b>urllib.parse</b> module introduced in the paper can be used |
@@ -91,10 +92,9 @@ print(build_prompt(url))
 However, this processing took even more time and wasted resources which is not ideal --> <b>unsloth</b> can be applied?
 - Switched to AdamW for optimization and AUC-ROC for evaluating but the result got worse. --> Each rule is distributed by 16% and labels are balanced. Hence f1 might suit this case
 
-
-#### 12-10-2025
-
-
+#### 15-10-2025
+- Found Python library <b>Unsloth</b> that provides a high-speed and memory-efficient way to fine-tune LLM. <br>
+This might enable ensemble learning (3 models on 25% of the data each) without running into time out error(?) 
 
 ----------------------------------------------
 - text mining
