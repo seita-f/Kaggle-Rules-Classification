@@ -4,7 +4,7 @@ The task is to create a model that predicts whether Reddit comments violate spec
 Furthermore, the test data contains a large amount of data that includes rules not present in the training data.
 
 ## Result
-1031/2437
+- Rank: 1031/2437
 - Public Score: 0.90903
 - Private Score: 0.90354
 
