@@ -39,8 +39,6 @@ Furthermore, the test data contains a large amount of data that includes rules n
 | paper | [URL に基づく機械学習を用いたフィッシングサイト判別の精度向上](https://www.jc.u-aizu.ac.jp/news/management/gr/2024/03.pdf) |Features of phising URLs. Although it may not apply much to this case, the <b>urllib.parse</b> module introduced in the paper can be used |
 
 ## Note
-(might use MLFlow later)
-
 dd-mm-yyyy
 #### 05-10-2025 (Joined!)
 - Build a base model with <b>Bert</b> and just passed body data
