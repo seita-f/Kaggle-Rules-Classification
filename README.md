@@ -3,6 +3,10 @@ This is the log for the Kaggle competiton [Jigsaw - Agile Community Rules Classi
 The task is to create a model that predicts whether Reddit comments violate specific rules. The labels for the training data are binary (violated or not violated), but during test inference, the model must output a numerical probability indicating the likelihood of violation.
 Furthermore, the test data contains a large amount of data that includes rules not present in the training data.
 
+## Result
+1031/2437
+- Public Score: 0.90903
+- Private Score: 0.90354
 
 ## Dataset
 | Name | Details |
