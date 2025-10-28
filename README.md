@@ -51,7 +51,7 @@ Using this data, I augmented the dataset to make it 5 times larger. Although the
 <img width="961" height="463" alt="Screen Shot 2025-10-28 at 2 40 36" src="https://github.com/user-attachments/assets/1f859c06-a543-4991-a0c2-9a01e899cbb5" />
 <img width="700" height="400" alt="Screen Shot 2025-10-08 at 20 56 48" src="https://github.com/user-attachments/assets/737170d2-f344-46fc-bf3c-7a7aac0ae1b0" /><br>
 This improved score from 0.584 to 0.767 <br><br>
-Added rule and subreddit data --> Score: 0.864
+Added rule and subreddit data --> Score: 0.815
 ```
 X = "Rule: " + df_train["rule"] +
     " Subreddit: " + df_train["subreddit"] + \
@@ -59,10 +59,26 @@ X = "Rule: " + df_train["rule"] +
 ```
 
 ### Data Analysis
-
+- Increased the data taken from the test set from 20% to 40%. However the result was almost the same. --> 20% of data is enough for trainig.
+- There is a chance that comments breaking the specific rules tend to have more capital letters? --> No huge difference <br>
+- Another hypothisis is that comments breaking the specifc rules tend to have more urls? --> No huge diffenrence 
+However, after training the dataset with URLs removed, the results got worse, indicating that <b>URLs are important features</b>. <br>
+<p align="center">
+  <img width="45%" alt="Screen Shot 2025-10-12 at 14 16 27" src="https://github.com/user-attachments/assets/93717880-5def-4232-b3bc-0e0378a2b7d8" /> 
+  <img width="45%" alt="Screen Shot 2025-10-12 at 14 18 25" src="https://github.com/user-attachments/assets/e6fe0d08-7761-4e4b-a481-a9343a49cc3d" /> 
+</p>
 
 ### URLs
-- Tried prompt engineering for urls such that 
+- Parsed URLs and removed emoji / unnecessary space --> Score: 0.864
+```
+# Before
+for you and your friend 2 codes for 4 dollars https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UN4E27AG7BWKS
+
+# After
+for you and your friend 2 codes for 4 dollars (URL Keywords: domain:paypal path:button)
+```
+
+- Tried prompt engineering for parsing urls such that 
 ```
 prompt = (
         f"Please list 3 to 5 keywords that are likely related to the content of this URL: {url}. "
@@ -74,40 +90,13 @@ print(build_prompt(url))
 
 ['onlyfans', 'user123', 'content', 'entertainment', 'social', 'media']
 ```
-However, this processing took even more time and wasted resources which is not ideal 
-- Switched to AdamW for optimization and AUC-ROC for evaluating but the result got worse. --> Each rule is distributed by 16% and labels are balanced. Hence f1 might suit this case
+However, this processing took even more time and wasted resources which is not ideal
 
 ### Bert Models
 
 ### LLM
 
 ### Ensembling
-
-
-
-#### 06-10-2025
-- Tuned RoBERTa model (an upgraded version of BERT) using body, but the score slightly dropped
-- Top players seem to use part of the test data for training and it boosts score significantly even without large LLMs. <br>
-In test.csv there are columns positive_example_1/2 and negative_example_1/2.
-For each rule in the test set, these contain labeled example comments that either violate or do not violate that rule.
-- Score: 0.761 (used 20% test data)
-  
-#### 09-10-2025
-- Added rule and subreddit data (finally) --> Score: 0.864
-```
-X = "Rule: " + df_train["rule"] +
-    " Subreddit: " + df_train["subreddit"] + \
-    " Comment: " + df_train['body']
-```
-- Increased the data taken from the test set from 20% to 40%. However the result was almost the same. --> 20% of data is enough for trainig.
-- There is a chance that comments breaking the specific rules tend to have more capital letters? --> No huge difference <br>
-- Another hypothisis is that comments breaking the specifc rules tend to have more urls? --> No huge diffenrence 
-However, after training the dataset with URLs removed, the results got worse, indicating that <b>URLs are important features</b>. <br>
-<p align="center">
-  <img width="45%" alt="Screen Shot 2025-10-12 at 14 16 27" src="https://github.com/user-attachments/assets/93717880-5def-4232-b3bc-0e0378a2b7d8" /> 
-  <img width="45%" alt="Screen Shot 2025-10-12 at 14 18 25" src="https://github.com/user-attachments/assets/e6fe0d08-7761-4e4b-a481-a9343a49cc3d" /> 
-</p>
-
 
 #### 15-10-2025
 - Removed noise from URLs such that "wwww" and replaced URL string to
@@ -119,10 +108,11 @@ However, the model's accuracy has decreased. --> path are also imortant features
 - Found Python library <b>Unsloth</b> that provides a high-speed and memory-efficient way to fine-tune LLM. <br>
 This might enable ensemble learning (3 models on 25% of the data each) without running into time out error(?) 
 
+
 ## To-do
 - synthetic data for tuning?
 - switch to prompt engineering?
 - prompt tuning, fine-tuning
-- using vLLM / unsloth for better performance?
-
+- using vLLM / unsloth for better performance? <br>
+--> vLLM prompt engineering was the best solution
 
