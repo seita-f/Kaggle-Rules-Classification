@@ -96,7 +96,16 @@ print(build_prompt(url))
 However, this processing took even more time and wasted resources which is not ideal
 
 ### Ensembling
+Created an ensemble of two RoBERTa models and one DeBERTa-v3 model. Since the competition’s evaluation metric was AUC, applied ranking-based aggregation for the ensemble.
+```
+r1 = rankdata(df1["rule_violation"])
+r2 = rankdata(df2["rule_violation"])
+r3 = rankdata(df3["rule_violation"])
 
+final_rank = (r1 + r2 + r3) / 3
+final_pred = final_rank / np.max(final_rank)
+```
+--> Score: 0.90903
 
 ## To-do
 - synthetic data for tuning?
