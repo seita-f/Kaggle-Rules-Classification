@@ -47,16 +47,17 @@ Furthermore, the test data contains a large amount of data that includes rules n
 - Hiden test data is 45-50k  
 ### Data Augumentation
 In train.csv and test.csv, there are columns positive_example_1/2 (violated) and negative_example_1/2 (non violated). <br>
-Using this data, I augmented the dataset to make it 5 times larger. Although the training data contained only two rules, it was discovered (thanks to expert Kagglers) that the test data included four additional rules. So I applied the same processing to the test data as well. <br>
+Using this data, I augmented the dataset to make it 5 times larger. Although the training data contained only two rules, it was discovered (thanks to expert Kagglers) that the test data included four additional rules. So I applied the same processing to the test data as well. <br><br>
 <img width="961" height="463" alt="Screen Shot 2025-10-28 at 2 40 36" src="https://github.com/user-attachments/assets/1f859c06-a543-4991-a0c2-9a01e899cbb5" />
 <img width="700" height="400" alt="Screen Shot 2025-10-08 at 20 56 48" src="https://github.com/user-attachments/assets/737170d2-f344-46fc-bf3c-7a7aac0ae1b0" /><br>
 This improved score from 0.584 to 0.767 <br><br>
 Added rule and subreddit data --> Score: 0.864
-"""
+```
 X = "Rule: " + df_train["rule"] +
     " Subreddit: " + df_train["subreddit"] + \
     " Comment: " + df_train['body']
-""" 
+```
+
 ### Data Analysis
 
 
