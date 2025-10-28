@@ -62,7 +62,7 @@ X = "Rule: " + df_train["rule"] +
 - Increased the data taken from the test set from 20% to 40%. However the result was almost the same. --> 20% of data is enough for trainig.
 - There is a chance that comments breaking the specific rules tend to have more capital letters? --> No huge difference <br>
 - Another hypothisis is that comments breaking the specifc rules tend to have more urls? --> No huge diffenrence
-- Feature of space count can be used for stacking model
+- Features of space count and capital ratio (higher than 70%) can be used for stacking model
 However, after training the dataset with URLs removed, the results got worse, indicating that <b>URLs are important features</b>. <br>
 <p align="center">
   <img width="45%" alt="Screen Shot 2025-10-12 at 14 16 27" src="https://github.com/user-attachments/assets/93717880-5def-4232-b3bc-0e0378a2b7d8" /> 
