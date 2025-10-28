@@ -66,6 +66,8 @@ However, after training the dataset with URLs removed, the results got worse, in
 <p align="center">
   <img width="45%" alt="Screen Shot 2025-10-12 at 14 16 27" src="https://github.com/user-attachments/assets/93717880-5def-4232-b3bc-0e0378a2b7d8" /> 
   <img width="45%" alt="Screen Shot 2025-10-12 at 14 18 25" src="https://github.com/user-attachments/assets/e6fe0d08-7761-4e4b-a481-a9343a49cc3d" /> 
+  <img width="45%" alt="Screen Shot 2025-10-12 at 14 16 27" src="https://github.com/user-attachments/assets/b603abfd-cf9a-4b19-9e3a-6a2ba89d0b68" /> 
+  <img width="45%" alt="Screen Shot 2025-10-12 at 14 18 25" src="https://github.com/user-attachments/assets/bcbbe689-6d47-46ef-8900-807af1ad198a" /> 
 </p>
 
 ### URLs
@@ -92,21 +94,7 @@ print(build_prompt(url))
 ```
 However, this processing took even more time and wasted resources which is not ideal
 
-### Bert Models
-
-### LLM
-
 ### Ensembling
-
-#### 15-10-2025
-- Removed noise from URLs such that "wwww" and replaced URL string to
-```
-feature_str = f"<URL:domain={domain}, shortener={is_shortener}, social={is_social}, ip={has_ip}>"
-```
-However, the model's accuracy has decreased. --> path are also imortant features?
-
-- Found Python library <b>Unsloth</b> that provides a high-speed and memory-efficient way to fine-tune LLM. <br>
-This might enable ensemble learning (3 models on 25% of the data each) without running into time out error(?) 
 
 
 ## To-do
