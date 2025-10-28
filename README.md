@@ -42,7 +42,7 @@ Furthermore, the test data contains a large amount of data that includes rules n
 | paper | [Chain-of-Thought (CoT) fine-tuning](https://arxiv.org/pdf/2508.11281) | To-Do |
 | paper | [URL に基づく機械学習を用いたフィッシングサイト判別の精度向上](https://www.jc.u-aizu.ac.jp/news/management/gr/2024/03.pdf) |Features of phising URLs. Although it may not apply much to this case, the <b>urllib.parse</b> module introduced in the paper can be used |
 
-## Note
+## Log
 - No internet is allowed, so pre-trained model should be added to the dataset on kaggle 
 - Hiden test data is 45-50k  
 ### Data Augumentation
@@ -61,7 +61,8 @@ X = "Rule: " + df_train["rule"] +
 ### Data Analysis
 - Increased the data taken from the test set from 20% to 40%. However the result was almost the same. --> 20% of data is enough for trainig.
 - There is a chance that comments breaking the specific rules tend to have more capital letters? --> No huge difference <br>
-- Another hypothisis is that comments breaking the specifc rules tend to have more urls? --> No huge diffenrence 
+- Another hypothisis is that comments breaking the specifc rules tend to have more urls? --> No huge diffenrence
+- Feature of space count can be used for stacking model
 However, after training the dataset with URLs removed, the results got worse, indicating that <b>URLs are important features</b>. <br>
 <p align="center">
   <img width="45%" alt="Screen Shot 2025-10-12 at 14 16 27" src="https://github.com/user-attachments/assets/93717880-5def-4232-b3bc-0e0378a2b7d8" /> 
